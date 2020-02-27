@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.171"
+         xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane fx:id="graphBox" disable="true" minHeight="0.0" minWidth="0.0" visible="false"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <children>
+                <BarChart fx:id="sentimentCompareBarChart" animated="false" legendVisible="false"
+                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Score" side="LEFT"/>
+                    </yAxis>
+                </BarChart>
+                <VBox fx:id="semesterLegend" layoutX="200.0" layoutY="371.0" AnchorPane.bottomAnchor="10.0"
+                      AnchorPane.leftAnchor="50.0"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefWidth="262.0" styleClass="sammenligning_outerbox"
+                    stylesheets="@../../Styles/sammenligning_box.css" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Sammenligning" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                </Label>
+                <Line endX="190.0" strokeLineCap="ROUND" strokeWidth="2.0" AnchorPane.leftAnchor="20.0"
+                      AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="70.0"/>
+                <AnchorPane layoutX="50.0" layoutY="172.0" prefHeight="130.0" prefWidth="200.0"
+                            styleClass="sammenligning_box" stylesheets="@../../Styles/sammenligning_box.css"
+                            AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
+                    <children>
+                        <Label fx:id="compare_SemesterLabel" layoutX="24.0" layoutY="43.0"
+                               text="[Valgt semester]&#10;[2 linjer text]" AnchorPane.leftAnchor="20.0"
+                               AnchorPane.topAnchor="20.0"/>
+                        <ComboBox fx:id="compare_PickMainModuleCombo" layoutX="36.0" layoutY="103.0"
+                                  onAction="#compare_PickMainModuleComboAction" styleClass="generic"
+                                  stylesheets="@../../Styles/buttons.css" AnchorPane.bottomAnchor="25.0"
+                                  AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"/>
+                    </children>
+                </AnchorPane>
+                <Label layoutX="58.0" layoutY="142.0" text="Sammenlign:" AnchorPane.leftAnchor="30.0"
+                       AnchorPane.topAnchor="110.0"/>
+                <Label layoutX="84.0" layoutY="453.0" text="Med:" AnchorPane.leftAnchor="30.0"
+                       AnchorPane.topAnchor="300.0"/>
+                <AnchorPane prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0"
+                            AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="330.0">
+                    <children>
+                        <Button fx:id="compareButton" mnemonicParsing="false" onAction="#search" prefWidth="140.0"
+                                styleClass="generic" stylesheets="@../../Styles/buttons.css" text="Sammenlign"
+                                AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0"/>
+                        <Button fx:id="openPickComparisonBoxButton" layoutX="10.0" layoutY="165.0"
+                                mnemonicParsing="false" onAction="#openPickComparisonBox" styleClass="generic"
+                                stylesheets="@../../Styles/buttons.css" text="Find semester"
+                                AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="5.0"/>
+                        <ScrollPane minHeight="182.0" styleClass="sammenligning_box"
+                                    stylesheets="@../../Styles/sammenligning_box.css" vbarPolicy="ALWAYS"
+                                    AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.topAnchor="0.0">
+                            <content>
+                                <AnchorPane fx:id="compareWithBox" prefWidth="200.0"/>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="pickComparisonBox" disable="true" minHeight="280.0" style="-fx-background-color: LIGHTGREY;"
+                    styleClass="find_semester" stylesheets="@../../Styles/sammenligning_box.css" visible="false"
+                    AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="190.0">
+            <children>
+                <AnchorPane prefWidth="400.0" styleClass="find_semester_inner"
+                            stylesheets="@../../Styles/sammenligning_box.css" AnchorPane.bottomAnchor="50.0"
+                            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                    <children>
+                        <Label text="Vælg semester:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0"/>
+                        <Label text="Vælg modul:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="85.0"/>
+                        <ComboBox fx:id="comparisonPickSemesterCombo" layoutX="44.0" layoutY="66.0"
+                                  onAction="#pickedSemester" prefWidth="210.0" AnchorPane.leftAnchor="20.0"
+                                  AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="35.0"/>
+                        <ComboBox fx:id="comparisonPickModuleCombo" layoutX="59.0" layoutY="106.0" prefWidth="150.0"
+                                  AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+                                  AnchorPane.topAnchor="110.0"/>
+                    </children>
+                </AnchorPane>
+                <Label layoutX="14.0" layoutY="14.0" text="Vælg semester at sammenligne med:"/>
+                <Button fx:id="pickComparisonXButton" layoutX="301.0" layoutY="9.0" mnemonicParsing="false"
+                        onAction="#closePickComparisonBox" prefHeight="30.0" prefWidth="30.0" styleClass="generic"
+                        stylesheets="@../../Styles/buttons.css" text="X" AnchorPane.rightAnchor="10.0"
+                        AnchorPane.topAnchor="10.0"/>
+                <Button fx:id="addComparisonButton" layoutX="2.0" layoutY="147.0" mnemonicParsing="false"
+                        onAction="#addModule" styleClass="generic" stylesheets="@../../Styles/buttons.css" text="Tilføj"
+                        AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</fx:root>

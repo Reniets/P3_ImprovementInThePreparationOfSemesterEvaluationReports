@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="600" minWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Interface.Controllers.SidebarController">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+            <children>
+                <AnchorPane fx:id="contentAnchorPane" layoutX="204.0" layoutY="2.0" prefWidth="500.0"
+                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                    <children>
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefWidth="200.0"
+                            style="-fx-border-width: 3; -fx-border-color: black; -fx-border-radius: 0; -fx-min-width: 206; -fx-max-width: 206; -fx-min-height: 630;"
+                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Line fx:id="homeBoxDividerLine" endX="150.0" layoutX="28.0" layoutY="512.0" opacity="0.85"
+                              strokeLineCap="ROUND" strokeWidth="3.0" visible="false" AnchorPane.bottomAnchor="253.0"
+                              AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0"/>
+                        <Label fx:id="semesterLabel" disable="true" layoutY="431.0"
+                               text="HVOR ER JEG?&#10;MEMES!&#10;BOTTOM TEXT" visible="false" wrapText="true"
+                               AnchorPane.bottomAnchor="273.0" AnchorPane.leftAnchor="10.0"
+                               AnchorPane.rightAnchor="10.0">
+                            <font>
+                                <Font name="Arial Bold Italic" size="16.0"/>
+                            </font>
+                        </Label>
+                        <AnchorPane fx:id="homeBox" disable="true" onMouseClicked="#homeBoxClicked" prefHeight="100.0"
+                                    prefWidth="200.0" styleClass="generic" stylesheets="@../Styles/buttons.css"
+                                    visible="false" AnchorPane.bottomAnchor="153.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="20.0"
+                                           pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0"
+                                           AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                                    <image>
+                                        <Image url="@../../Resources/house-308936_960_720.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Mine Semestre" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0"
+                                       AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="10.0"
+                                       AnchorPane.topAnchor="20.0"/>
+                            </children>
+                        </AnchorPane>
+                        <Line endX="200.0" endY="615.0" startY="615.0" strokeLineCap="BUTT" strokeType="OUTSIDE"
+                              strokeWidth="2.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0"/>
+                        <AnchorPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Label fx:id="name" layoutX="32.0" layoutY="65.0" maxHeight="32.0" maxWidth="100.0"
+                                       text="[Navn]" wrapText="true" AnchorPane.leftAnchor="10.0"
+                                       AnchorPane.topAnchor="20.0"/>
+                                <Label fx:id="title" layoutX="25.0" layoutY="65.0" maxHeight="32.0" maxWidth="100.0"
+                                       text="" wrapText="true" AnchorPane.leftAnchor="10.0"
+                                       AnchorPane.topAnchor="60.0"/>
+                                <Button fx:id="logoutButton" layoutX="58.0" layoutY="105.0" mnemonicParsing="false"
+                                        onAction="#logoutButtonAction" styleClass="generic"
+                                        stylesheets="@../Styles/buttons.css" text="Log ud"
+                                        AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0"
+                                        AnchorPane.rightAnchor="30.0"/>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="115.0" layoutY="8.0"
+                                           pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0"
+                                           AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                    <image>
+                                        <Image url="@../../Resources/avatar_black-1577909_960_720.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="tab1Button" disable="true" layoutX="83.0" layoutY="14.0" mnemonicParsing="false"
+                                onAction="#tab1ButtonAction" prefHeight="60.0" prefWidth="120.0" styleClass="tabbutton"
+                                stylesheets="@../Styles/buttons.css" text="Sentiment" visible="false"
+                                AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="10.0"/>
+                        <Button fx:id="tab2Button" disable="true" layoutX="93.0" layoutY="24.0" mnemonicParsing="false"
+                                onAction="#tab2ButtonAction" prefHeight="60.0" prefWidth="120.0" styleClass="tabbutton"
+                                stylesheets="@../Styles/buttons.css" text="Sammenlign" visible="false"
+                                AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="75.0"/>
+                        <Button fx:id="tab3Button" disable="true" layoutX="93.0" layoutY="24.0" mnemonicParsing="false"
+                                onAction="#tab3ButtonAction" prefHeight="60.0" prefWidth="120.0" styleClass="tabbutton"
+                                stylesheets="@../Styles/buttons.css" text="Markeringer" visible="false"
+                                AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="140.0"/>
+                        <Button fx:id="tab4Button" disable="true" layoutX="93.0" layoutY="24.0" mnemonicParsing="false"
+                                onAction="#tab4ButtonAction" prefHeight="60.0" prefWidth="120.0" styleClass="tabbutton"
+                                stylesheets="@../Styles/buttons.css" text="Rådata" visible="false"
+                                AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="205.0"/>
+                    </children>
+                </AnchorPane>
+                <TabPane fx:id="analyseTabPane" disable="true" layoutX="206.0" rotateGraphic="true" side="LEFT"
+                         stylesheets="@../Styles/tab.css" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="0.0"
+                         tabMaxWidth="0.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="199.0"
+                         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                        <Tab text="Sentiment">
+
+                        </Tab>
+                        <Tab text="Analyse">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0"/>
+                            </content>
+                        </Tab>
+                        <Tab text="Markeringer">
+                            <content>
+                                <AnchorPane fx:id="tabMarkings" minHeight="0.0" minWidth="0.0"/>
+                            </content>
+                        </Tab>
+                        <Tab text="Rådata">
+                            <content>
+                                <AnchorPane fx:id="tabRawData" minHeight="0.0" minWidth="0.0"/>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

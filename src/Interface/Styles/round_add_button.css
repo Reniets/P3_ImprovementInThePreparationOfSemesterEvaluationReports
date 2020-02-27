@@ -1,0 +1,11 @@
+.round_button_add {
+    -fx-background-radius: 7em;
+    -fx-min-width: 15px;
+    -fx-min-height: 15px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+}
+
+.round_button_add:hover {
+    -fx-cursor: hand;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<fx:root type="AnchorPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane fx:id="anpContents" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="btnBack" mnemonicParsing="false" text="Ok" minWidth="60.0" AnchorPane.leftAnchor="10.0"
+                        AnchorPane.topAnchor="18.0"/>
+                <Label textAlignment="CENTER" fx:id="lblQuestion" text="Spørgsmål" wrapText="true"
+                       AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="13.0" AnchorPane.rightAnchor="95">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label textAlignment="CENTER" fx:id="lblModule" text="Modul" AnchorPane.leftAnchor="80.0"
+                       AnchorPane.topAnchor="32.0" AnchorPane.rightAnchor="95"/>
+                <TextArea fx:id="txtComment" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true"
+                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                          AnchorPane.topAnchor="60.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</fx:root>

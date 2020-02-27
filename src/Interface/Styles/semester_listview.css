@@ -1,0 +1,19 @@
+.semester_listview {
+    -fx-focus-color: transparent;
+    -fx-padding: 3px;
+    -fx-background-color: grey;
+}
+
+.list-cell {
+    -fx-padding: 1px;
+    -fx-background-color: transparent, -fx-background;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 0px, 2px;
+    -fx-selection-bar: white;
+}
+
+.list-cell:empty {
+    -fx-padding: 2px;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}

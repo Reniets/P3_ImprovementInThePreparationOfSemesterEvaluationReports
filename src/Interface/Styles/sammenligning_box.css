@@ -1,0 +1,21 @@
+.sammenligning_box {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-max-width: 220;
+    -fx-min-width: 220;
+}
+
+.sammenligning_outerbox {
+    -fx-border-width: 0 2 0 0;
+    -fx-border-color: black;
+}
+
+.find_semester {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.find_semester_inner {
+    -fx-border-color: black;
+    -fx-border-width: 2 0 2 0;
+}

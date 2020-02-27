@@ -1,0 +1,4 @@
+POSITIVE;Dette er en positiv kommentar
+POSITIVE;Dette er endnu en positiv kommentar
+NEGATIVE;Dette er en negativ kommentar awesome
+NEGATIVE;Dette er endnu en negativ kommentar

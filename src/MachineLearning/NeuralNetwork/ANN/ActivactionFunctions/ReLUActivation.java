@@ -1,0 +1,43 @@
+package MachineLearning.NeuralNetwork.ANN.ActivactionFunctions;
+
+import MachineLearning.NeuralNetwork.ANN.ActivactionFunctions.Enums.MatrixPref;
+
+import java.util.Objects;
+
+public class ReLUActivation implements ActivationFunction {
+    private final int ID = 2;
+    private final MatrixPref matrixPref = MatrixPref.NET;
+
+    @Override
+    public double function(double x) {
+        return Math.max(x, 0);
+    }
+
+    @Override
+    public double functionPrime(double x) {
+        return (x > 0) ? 1 : 0;
+    }
+
+    @Override
+    public int getID() {
+        return this.ID;
+    }
+
+    @Override
+    public MatrixPref getMatrixPref() {
+        return matrixPref;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ReLUActivation that = (ReLUActivation) o;
+        return ID == that.ID;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ID);
+    }
+}

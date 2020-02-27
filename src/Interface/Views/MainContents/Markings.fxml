@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<fx:root minHeight="600.0" minWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+         type="AnchorPane">
+    <children>
+        <StackPane fx:id="stpContents" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="anpMarkingPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ComboBox fx:id="cbxModule" prefWidth="150.0" AnchorPane.leftAnchor="10.0"
+                                  AnchorPane.topAnchor="18.0"/>
+                        <ComboBox fx:id="cbxQuestion" prefWidth="150.0" AnchorPane.leftAnchor="170.0"
+                                  AnchorPane.topAnchor="18.0"/>
+                        <TextField fx:id="txtSearch" promptText="Indsæt søgetekst..." AnchorPane.rightAnchor="60.0"
+                                   AnchorPane.topAnchor="18.0"/>
+                        <Button fx:id="btnSearch" mnemonicParsing="false" prefWidth="50" text="Søg"
+                                AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="18.0"/>
+                        <TableView fx:id="tbvMarkings" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                            <columns>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="anpLoadingPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                              AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <ProgressIndicator prefWidth="100.0" prefHeight="100.0"/>
+                                        <Label text="Indlæser data...">
+                                            <font>
+                                                <Font size="16.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</fx:root>

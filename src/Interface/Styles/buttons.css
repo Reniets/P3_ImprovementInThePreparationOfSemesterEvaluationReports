@@ -1,0 +1,15 @@
+.generic:hover {
+    -fx-cursor: hand;
+}
+
+.tabbutton {
+    -fx-border-width: 2 0 2 2;
+    -fx-border-color: grey;
+    -fx-border-radius: 25 0 0 25;
+    -fx-background-radius: 25 0 0 25;
+    -fx-cursor: hand;
+}
+
+.selected {
+    -fx-background-color: darkgrey;
+}

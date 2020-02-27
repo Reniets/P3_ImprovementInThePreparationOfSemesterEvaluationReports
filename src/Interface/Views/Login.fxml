@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="600" minWidth="900" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Interface.Controllers.LoginController">
+    <children>
+        <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox fx:id="hbxLoginDetails" alignment="CENTER" AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Resources/aau_logo.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="lblLoginError" prefHeight="66.0" prefWidth="206.0" text="Fejl:"
+                                       textFill="#b52424" visible="false"/>
+                                <GridPane alignment="CENTER" prefHeight="89.0" prefWidth="236.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0"
+                                                           prefWidth="90.0"/>
+                                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="116.0"
+                                                           minWidth="10.0" prefWidth="116.0"/>
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0"
+                                                        vgrow="SOMETIMES"/>
+                                        <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0"
+                                                        vgrow="SOMETIMES"/>
+                                    </rowConstraints>
+                                    <children>
+                                        <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER"
+                                                defaultButton="true" mnemonicParsing="false" onAction="#login"
+                                                text="Log Ind" GridPane.rowIndex="2"/>
+                                        <Label prefHeight="15.0" prefWidth="74.0" text="Brugernavn"/>
+                                        <Label prefHeight="15.0" prefWidth="89.0" text="Adgangskode"
+                                               GridPane.rowIndex="1"/>
+                                        <TextField fx:id="userName" onAction="#txtLoginEnterPressed"
+                                                   promptText="init@fakultet.aau.dk" text="" GridPane.columnIndex="1"/>
+                                        <PasswordField fx:id="password" onAction="#login" promptText="********"
+                                                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox fx:id="hbxLoginLoader" alignment="CENTER" visible="false">
+                    <cursor>
+                        <Cursor fx:constant="WAIT"/>
+                    </cursor>
+                    <children>
+                        <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                            <children>
+                                <ProgressIndicator prefHeight="100.0" prefWidth="100.0"/>
+                                <Label text="Logger På">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
