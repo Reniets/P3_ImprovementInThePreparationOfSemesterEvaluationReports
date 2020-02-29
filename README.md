@@ -10,3 +10,8 @@ This image shows how evaluations in different modules can be compared to each ot
 
 This last image shows how the raw evaluation data can also be illustrated inside the platform:
 ![Recommendation](images/overviewRawdata.png)
+
+# Group Members and Report:
+Christian Graae Zandersen, Jesper Adriaan van Diepen, Mike Lund Andersen, Nanna Søgaard Andersen, Niki Zakariassen, Rasmus Lindegaard, Simon Steiner
+
+[Report](Report.pdf)
